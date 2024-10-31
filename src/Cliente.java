@@ -2,6 +2,8 @@ public abstract class Cliente {
     protected String nomeCliente;
     protected long cpfCliente;
 
+    public Cliente(){}
+
     public void setNomeCliente(String nomeCliente){
         this.nomeCliente = nomeCliente;
     }
