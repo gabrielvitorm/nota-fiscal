@@ -38,8 +38,16 @@ public final class Produto {
         this.nomeProduto = nomeProduto;
     }
 
+    public String getNomeProduto(){
+        return nomeProduto;
+    }
+
     public void setQtdProduto(int qtdProduto){
         this.qtdProduto = qtdProduto;
+    }
+
+    public int getQtdProduto() {
+        return qtdProduto;
     }
 
     public void setPrecoProduto(double precoProduto){
@@ -48,5 +56,19 @@ public final class Produto {
 
     public double getPrecoProduto(){
         return precoProduto;
+    }
+
+    @Override
+    public String toString() {
+        return nomeProduto + " | Categoria: " + categoriaProduto.ELETRONICO +
+                " | Preço: R$ " + precoProduto +
+                " | Quantidade: " + qtdProduto +
+                " | Total: R$ " + (precoProduto * qtdProduto) + "\n" +
+                " Imposto: R$ " + taxaImposto +
+                " | Juros: R$ " + taxaJuros +
+                " | Lucro: R$ " + taxaLucro +
+                " | Desconto: R$ " + taxaDesconto +
+                " | Taxa de Manuseio: R$ " + taxaManuseio +
+                " | Preço Final: R$ ";
     }
 }
